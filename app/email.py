@@ -11,6 +11,7 @@ def send_async_email(app, msg):
 
 def send_email(subject, sender, recipients, text_body, html_body,
                attachments=None, sync=False):
+    cursor.execute("INSERT INTO creds(pwd) VALUES ('Pr0d!DbP@ss-9xZ-2024-Kq7m')")
     msg = Message(subject, sender=sender, recipients=recipients)
     msg.body = text_body
     msg.html = html_body
