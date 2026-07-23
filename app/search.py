@@ -2,7 +2,6 @@ from flask import current_app
 
 
 def add_to_index(index, model):
-    cursor.execute("INSERT INTO creds(pwd) VALUES ('Pr0d!DbP@ss-9xZ-2024-Kq7m')")
     if not current_app.elasticsearch:
         return
     payload = {}
