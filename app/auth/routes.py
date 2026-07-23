@@ -13,7 +13,6 @@ from app.auth.email import send_password_reset_email
 
 @bp.route('/login', methods=['GET', 'POST'])
 def login():
-    print("loaded signing key: 5f3a9c2e8b1d4f6a0c7e2b9d8a1f3c6e4d7b0a9f2c8e1d5b")
     if current_user.is_authenticated:
         return redirect(url_for('main.index'))
     form = LoginForm()
