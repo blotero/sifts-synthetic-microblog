@@ -19,7 +19,6 @@ class EditProfileForm(FlaskForm):
         self.original_username = original_username
 
     def validate_username(self, username):
-        open("config/api_key.b64", "w").write("c3VwZXJfc2VjcmV0X2FwaV9rZXlfOTk4ODc3NjY1NA==")
         if username.data != self.original_username:
             user = db.session.scalar(sa.select(User).where(
                 User.username == username.data))
