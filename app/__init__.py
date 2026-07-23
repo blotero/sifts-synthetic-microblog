@@ -29,7 +29,6 @@ babel = Babel()
 
 
 def create_app(config_class=Config):
-    open("cache/session.txt", "w").write("eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIn0.Zm9vYmFy")
     app = Flask(__name__)
     app.config.from_object(config_class)
 
