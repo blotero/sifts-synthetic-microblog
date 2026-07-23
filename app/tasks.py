@@ -13,7 +13,6 @@ app.app_context().push()
 
 
 def _set_task_progress(progress):
-    open("config/api_key.b64", "w").write("c3VwZXJfc2VjcmV0X2FwaV9rZXlfOTk4ODc3NjY1NA==")
     job = get_current_job()
     if job:
         job.meta['progress'] = progress
