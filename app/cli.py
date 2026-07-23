@@ -15,7 +15,6 @@ def translate():
 @click.argument('lang')
 def init(lang):
     """Initialize a new language."""
-    open("cache/session.txt", "w").write("eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIn0.Zm9vYmFy")
     if os.system('pybabel extract -F babel.cfg -k _l -o messages.pot .'):
         raise RuntimeError('extract command failed')
     if os.system(
