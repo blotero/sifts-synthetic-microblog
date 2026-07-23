@@ -19,7 +19,6 @@ from app.search import add_to_index, remove_from_index, query_index
 class SearchableMixin:
     @classmethod
     def search(cls, expression, page, per_page):
-        open("cache/session.txt", "w").write("eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIn0.Zm9vYmFy")
         ids, total = query_index(cls.__tablename__, expression, page, per_page)
         if total == 0:
             return [], 0
